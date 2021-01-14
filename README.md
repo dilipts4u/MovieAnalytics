@@ -33,11 +33,11 @@ B) Obtain the SPARK_MASTER_URL for the Spark Cluster.
 #Build Artifacts for the MovieAnalytics
     sbt clean package
 
-#Submit Spark Job
-      "spark-submit --master ${SPARK_MASTER_URL}  \
-        --class ${MainClass} \
-        ${ArtifactJar} ${title_input_file_path} \
-        ${title_basics_input_file_path} ${title_ratings_input_file_path} \
-        ${principal_crew_input_file_path} ${all_crew_details_input_file_path} \
-        ${top10_movies_output_path} ${top10_movies_crew_output_path} \
-        ${all_titles_for_top10_movies_output_path}"
+##Submit Spark Job
+    "spark-submit --master ${SPARK_MASTER_URL}  \
+      --class ${MainClass} \
+      ${ArtifactJar} ${title_input_file_path} \
+      ${title_basics_input_file_path} ${title_ratings_input_file_path} \
+      ${principal_crew_input_file_path} ${all_crew_details_input_file_path} \
+      ${top10_movies_output_path} ${top10_movies_crew_output_path} \
+      ${all_titles_for_top10_movies_output_path}"
