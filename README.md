@@ -30,10 +30,10 @@ B) Obtain the SPARK_MASTER_URL for the Spark Cluster.
 
     The dataset is located at tractable-analytics/data/movie_analytics/input/
 
-#Build Artifacts for the MovieAnalytics
+## Build Artifacts for the MovieAnalytics
     sbt clean package
 
-##Submit Spark Job
+## Submit Spark Job
     "spark-submit --master ${SPARK_MASTER_URL}  \
       --class ${MainClass} \
       ${ArtifactJar} ${title_input_file_path} \
